@@ -8,9 +8,9 @@ export default function App() {
   const [stateArr, setStateArr]= useState([])
   const array =[]
   function fun(){
-    array.push("a");
+    stateArr.push("a");
   
-    setStateArr(array)
+    setStateArr(stateArr,)
     console.log(stateArr)
   }
   function del(){
