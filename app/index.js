@@ -6,7 +6,6 @@ import {useState } from 'react'
 
 export default function App() {
   const [stateArr, setStateArr]= useState([])
-  const array =[]
   function fun(){
     stateArr.push("a");
   
@@ -14,8 +13,8 @@ export default function App() {
     console.log(stateArr)
   }
   function del(){
-    array.pop();
-    setStateArr(array)
+    stateArr.pop();
+    setStateArr(stateArr)
   }
   return (
     <div>
