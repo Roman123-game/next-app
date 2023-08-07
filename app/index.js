@@ -8,10 +8,10 @@ export default function App() {
   const [stateArr, setStateArr]= useState([])
   const array =[]
   function fun(){
-    array.push("a");
+    [...array].push("a");
   
     setStateArr(array)
-    console.log(state)
+    console.log(stateArr)
   }
   function del(){
     array.pop();
@@ -24,7 +24,7 @@ export default function App() {
       <ambientLight intensity={0.5} />      
       <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />      
       <pointLight position={[-10, -10, -10]} /> 
-       {stateArr.map((item,index)=> {return  <Pyramid position={[index, 0, 0]} color={'red'} />})}
+       {stateArr.map((item,index)=> {return  <Pyramid key={index} position={[index, 0, 0]} color={'red'} />})}
        <Pyramid position={[-1.2, 0, 0]} color={'red'} />
 
    
